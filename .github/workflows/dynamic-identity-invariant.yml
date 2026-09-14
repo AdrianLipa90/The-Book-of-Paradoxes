@@ -1,0 +1,25 @@
+name: Dynamic identity invariant
+
+on:
+  push:
+    branches:
+      - feat/dynamic-identity-invariant-v0.1
+    paths:
+      - 'operators/nonparadoxical/dynamic_identity_invariant/**'
+      - 'validation/validate_dynamic_identity_invariant.py'
+      - '.github/workflows/dynamic-identity-invariant.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-dynamic-identity-invariant:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate dynamic identity invariant
+        run: python validation/validate_dynamic_identity_invariant.py
