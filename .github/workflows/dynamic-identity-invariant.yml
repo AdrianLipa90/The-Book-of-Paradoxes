@@ -5,6 +5,7 @@ on:
     branches:
       - feat/dynamic-identity-invariant-v0.1
     paths:
+      - 'operators/nonparadoxical/README.md'
       - 'operators/nonparadoxical/dynamic_identity_invariant/**'
       - 'validation/validate_dynamic_identity_invariant.py'
       - '.github/workflows/dynamic-identity-invariant.yml'
