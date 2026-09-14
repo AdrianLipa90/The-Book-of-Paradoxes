@@ -12,7 +12,17 @@ A theorem-first reconstruction of paradoxes as explicit mathematical structures.
   - standard consequence: a conjugate pair of rotations generates `F_2 < SO(3)`
   - classical consequence: Banach–Tarski equidecomposition (with Choice)
 
-See [`paradoxes/banach_tarski/README.md`](paradoxes/banach_tarski/README.md).
+  See [`paradoxes/banach_tarski/README.md`](paradoxes/banach_tarski/README.md).
+
+- **Zeno** — `CLOSED_REDUCTION`
+  - involution split: `Pi=(I+J)/2`, `D=(I-J)/2`
+  - contraction: `Z_lambda=Pi+lambda D`
+  - exact iterate: `Z_lambda^n=Pi+lambda^n D`
+  - dichotomy case: `lambda=1/2`
+  - limit: contraction to `Fix(J)`
+  - Riemann critical-strip specialization retained only as a typed crosswalk, not an RH proof
+
+  See [`paradoxes/zeno/README.md`](paradoxes/zeno/README.md).
 
 ## Epistemic policy
 
