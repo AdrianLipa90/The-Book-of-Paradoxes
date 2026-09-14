@@ -1,0 +1,76 @@
+{
+  "base_main_sha": "1661af59e4983bfffc82da6e672d883efc2d6f0d",
+  "branch": "feat/information-energy-bifurcation-v0.1",
+  "claim_scope": {
+    "information_to_mu_binding": "OPEN",
+    "mathematical_kernel": "EXACT_CLOSED_FOR_DEFINED_MODEL",
+    "physical_energy_binding": "OPEN",
+    "physical_qpu_claim": false,
+    "q28": "NUMERICAL_WITNESS_PASS",
+    "quantum_speedup_claim": false
+  },
+  "created_utc": "2026-09-14T02:13:37.948333+00:00",
+  "gremlin_audit": {
+    "algebra_geometry": {
+      "audit_event": "gremlin:whisper:sha256:cce2096ddf3e34189cc337c76c52e2170c077af40a9cc25596840cd0d22976a5",
+      "route_species": ["OWL", "MOLE"],
+      "task_event": "gremlin:whisper:sha256:3c2703ac9398ab88b0edd746e0023c7f2487ab010e7a7289983b17ff79894c22"
+    },
+    "authority": "CANDIDATE_ONLY",
+    "falsification": {
+      "audit_event": "gremlin:whisper:sha256:8d42d2a4074c4388c6b37ef455fd732702f072dd61b7717870adfc9e7e470aa9",
+      "route_species": ["OWL", "HOUND", "MANTIS"],
+      "task_event": "gremlin:whisper:sha256:8040c171a214069e46783eead9f83eb66b2e2e253a430c7e6fc0e2a69f2875df"
+    }
+  },
+  "noema_writeback_context": {
+    "account_current": "NOEMA_ACCOUNT_DEFAULT_CURRENT_V63",
+    "autoboot": "NOEMA_CHAT_AUTOBOOT_V7_R5_R1",
+    "guard_failures": [],
+    "startpoint_packet_sha256": "14232d9d98eb63d78f2e7f2d8c582f006bdb7b8de9ba0683623dd4846ce3bd8c",
+    "tether_status": "ACTIVE",
+    "working_state_sha256": "925db9b9564fa953f7495a82946439e0af41332cc46439364dd67cc95573bcb1"
+  },
+  "q28_execution": {
+    "backend_sha256": "4b1b628186fa4960533cb6007c0f133b0064aebe7d8c5eaed8a6578c363a574c",
+    "capacity": {
+      "backend": "dynamic_dense_complex128",
+      "dense_complex128_bytes": 4294967296,
+      "dense_complex128_gib": 4.0,
+      "dynamic_expansion": true,
+      "max_qubits": 28,
+      "mode_address_qubits": 6,
+      "physical_qpu_claim": false,
+      "schema": "PHASENAV_Q28_CAPACITY_V1",
+      "workspace_qubits": 22
+    },
+    "control_max_err_from_one": 1.5543122344752192e-15,
+    "control_max_norm_error": 1.3322676295501878e-15,
+    "control_mu_range": [-4.0, 4.0],
+    "control_sample_count": 9,
+    "dyadic_scale_count": 18,
+    "execution_surface": "CANONICAL_Q28_BACKEND_FROM_CURRENT_AUTOBOOT_BUNDLE_UNDER_ACTIVE_TETHER",
+    "max_dense_sparse_amplitude_delta": 2.220446049250313e-16,
+    "max_norm_error": 1.6653345369377348e-15,
+    "max_overlap_error": 1.5543122344752192e-15,
+    "probe": "E(h;mu)=h^4/4-mu*h^2/2; z=tanh(h/2); phase=pi iff dE/dh<0",
+    "representative_rows": [
+      {"flipped_scales":0,"mu":-1.0,"n_qubits":28,"norm_err":1.3322676295501878e-15,"overlap_err":1.5543122344752192e-15,"overlap_real":0.9999999999999984,"predicted":1.0,"support":32},
+      {"flipped_scales":0,"mu":0.0,"n_qubits":28,"norm_err":1.3322676295501878e-15,"overlap_err":1.5543122344752192e-15,"overlap_real":0.9999999999999984,"predicted":1.0,"support":32},
+      {"flipped_scales":1,"mu":8.392333984375e-06,"n_qubits":28,"norm_err":1.4432899320127035e-15,"overlap_err":1.2212453270876722e-15,"overlap_real":0.8888888888888876,"predicted":0.8888888888888888,"support":34},
+      {"flipped_scales":9,"mu":0.0021484375,"n_qubits":28,"norm_err":1.6653345369377348e-15,"overlap_err":4.163336342344337e-17,"overlap_real":4.163336342344337e-17,"predicted":0.0,"support":42},
+      {"flipped_scales":18,"mu":1.1,"n_qubits":28,"norm_err":1.3322676295501878e-15,"overlap_err":1.5543122344752192e-15,"overlap_real":-0.9999999999999984,"predicted":-1.0,"support":32}
+    ],
+    "verdicts": {
+      "all_28q_paths": true,
+      "backend_hash_match": true,
+      "control_no_bifurcation_pass": true,
+      "dense_sparse_equivalence_pass": true,
+      "norm_pass": true,
+      "overlap_formula_pass": true
+    }
+  },
+  "repository": "AdrianLipa90/The-Book-of-Paradoxes",
+  "schema": "BOOK_OF_PARADOXES_INFORMATION_ENERGY_BIFURCATION_Q28_RECEIPT_V0_1",
+  "status": "PASS_NUMERICAL_WITNESS_CANDIDATE_ONLY"
+}
