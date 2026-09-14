@@ -22,3 +22,7 @@ It may still be used inside the analysis of a paradox.
 - `information_energy_bifurcation/` — an information-controlled Poincare
   pitchfork model with a closed mathematical kernel, a Q28 numerical witness,
   and an explicitly open information-to-physical-energy binding.
+- `dynamic_identity_invariant/` — a transport-compatible operator invariant with
+  an exact tetrahedral kernel, exact graph commutator theorem under stated
+  hypotheses, exact tetrahedral half-turn holonomy, and a conditional periodic
+  n-simplex extension. No personal or physical identity binding is claimed.
