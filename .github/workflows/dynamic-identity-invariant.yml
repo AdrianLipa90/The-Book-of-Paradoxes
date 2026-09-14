@@ -3,7 +3,16 @@ name: Dynamic identity invariant
 on:
   push:
     branches:
+      - main
       - feat/dynamic-identity-invariant-v0.1
+    paths:
+      - 'operators/nonparadoxical/README.md'
+      - 'operators/nonparadoxical/dynamic_identity_invariant/**'
+      - 'validation/validate_dynamic_identity_invariant.py'
+      - '.github/workflows/dynamic-identity-invariant.yml'
+  pull_request:
+    branches:
+      - main
     paths:
       - 'operators/nonparadoxical/README.md'
       - 'operators/nonparadoxical/dynamic_identity_invariant/**'
@@ -22,5 +31,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate dynamic identity invariant
+      - name: Validate dynamic identity invariant v0.2
         run: python validation/validate_dynamic_identity_invariant.py
