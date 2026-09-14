@@ -41,8 +41,7 @@ Define
 
 \[
 \boxed{\Pi=\frac{I+J}{2}},\qquad
-\boxed{D=\frac{I-J}{2}.
-}
+\boxed{D=\frac{I-J}{2}}.
 \]
 
 Then exactly
