@@ -19,3 +19,15 @@ jobs:
           python-version: '3.12'
       - name: Validate Banach-Tarski stella bridge
         run: python validation/validate_banach_tarski_stella.py
+
+  zeno-distinction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Zeno contraction reduction
+        run: python validation/validate_zeno_distinction.py
