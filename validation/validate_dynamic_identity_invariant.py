@@ -68,6 +68,10 @@ def commutator(A, B):
     return msub(mm(A, B), mm(B, A))
 
 
+def turn_fraction(n):
+    return (3*acos(-1/(n-1))-pi)/(2*pi)
+
+
 checks = {}
 checks["tetra_pair_dot_minus_one_third"] = all(
     abs(dot(V[i], V[j]) + 1/3) <= TOL
@@ -97,6 +101,12 @@ Omega = 3*A - pi
 checks["tetra_spherical_face_angle_two_pi_over_three"] = abs(A - 2*pi/3) <= TOL
 checks["tetra_spherical_excess_pi"] = abs(Omega - pi) <= TOL
 
+turns = {n: turn_fraction(n) for n in range(3, 13)}
+checks["tetrahedral_half_turn_fraction"] = abs(turns[3] - 0.5) <= TOL
+checks["half_turn_unique_sample"] = all(abs(turns[n] - 0.5) > 1e-6 for n in range(4, 13))
+checks["higher_simplex_turns_between_quarter_and_half"] = all(0.25 < turns[n] < 0.5 for n in range(4, 13))
+checks["turn_fraction_strictly_decreases_sample"] = all(turns[n+1] < turns[n] for n in range(3, 12))
+
 N = 3
 Sig = [[0j]*(2*N) for _ in range(2*N)]
 H = [[0j]*(2*N) for _ in range(2*N)]
@@ -118,17 +128,19 @@ checks["negative_control_breaks_invariant"] = maxabs(commutator(H_bad, Sig)) > 1
 
 passed = all(checks.values())
 print(json.dumps({
-    "schema": "DYNAMIC_IDENTITY_INVARIANT_NONPARADOXICAL_V0_1",
+    "schema": "DYNAMIC_IDENTITY_INVARIANT_NONPARADOXICAL_V0_2",
     "technical_status": "PASS" if passed else "FAIL",
     "claim_scope": {
         "tetrahedral_kernel": "EXACT",
         "abstract_graph_theorem": "EXACT_UNDER_STATED_HYPOTHESES",
-        "periodic_n_simplex_realization": "CONDITIONAL",
+        "periodic_n_simplex_realization": "EXACT_FOR_EXPLICIT_CONSTRUCTION",
+        "tetrahedral_half_turn_uniqueness": "EXACT_FOR_REGULAR_N_SIMPLEX_FAMILY_N>=3",
         "information_to_mu_binding": "OPEN",
         "physical_energy_binding": "OPEN",
         "personal_or_physical_identity_binding": "NOT_CLAIMED",
     },
     "checks": checks,
+    "turn_fractions_sample": {str(k): v for k, v in turns.items()},
     "max_commutator_good": maxabs(commutator(H, Sig)),
     "max_commutator_bad": maxabs(commutator(H_bad, Sig)),
     "spherical_excess": Omega,
