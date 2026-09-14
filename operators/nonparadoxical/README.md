@@ -23,6 +23,7 @@ It may still be used inside the analysis of a paradox.
   pitchfork model with a closed mathematical kernel, a Q28 numerical witness,
   and an explicitly open information-to-physical-energy binding.
 - `dynamic_identity_invariant/` — a transport-compatible operator invariant with
-  an exact tetrahedral kernel, exact graph commutator theorem under stated
-  hypotheses, exact tetrahedral half-turn holonomy, and a conditional periodic
-  n-simplex extension. No personal or physical identity binding is claimed.
+  an exact tetrahedral kernel, exact graph commutator theorem, exact general
+  regular-simplex triangular holonomy law, tetrahedral half-turn uniqueness,
+  and one explicit exact periodic Bloch–Floquet regular-simplex construction.
+  Arbitrary gluings and personal/physical identity bindings are not claimed.
