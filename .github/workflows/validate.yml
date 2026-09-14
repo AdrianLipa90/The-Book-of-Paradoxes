@@ -31,3 +31,15 @@ jobs:
           python-version: '3.12'
       - name: Validate Zeno contraction reduction
         run: python validation/validate_zeno_distinction.py
+
+  information-energy-bifurcation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate information-controlled Poincare bifurcation
+        run: python validation/validate_information_energy_bifurcation.py

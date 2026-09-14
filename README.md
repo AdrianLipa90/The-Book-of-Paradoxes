@@ -24,6 +24,23 @@ A theorem-first reconstruction of paradoxes as explicit mathematical structures.
 
   See [`paradoxes/zeno/README.md`](paradoxes/zeno/README.md).
 
+## Supporting nonparadoxical operators
+
+These operators are kept separate from the paradox catalogue. They may be used
+as reductions, bridges, or falsification tools without being classified as
+paradoxes themselves.
+
+- **Information-controlled Poincare bifurcation** — `VALIDATED_NONPARADOXICAL_OPERATOR_CANDIDATE`
+  - exact signed geodesic coordinate: `z=tanh(h/2)`
+  - exact quartic pitchfork: `E(h;mu)=h^4/4-mu*h^2/2`
+  - exact stable branches: `h=0` for `mu<=0`, `h=±sqrt(mu)` for `mu>0`
+  - exact minimum-energy branch: `E_min=0` or `-mu^2/4`
+  - exact 36-phase overlap law: `1-N/9`
+  - pinned Q28 28-logical-qubit sparse witness: `PASS`
+  - information-to-`mu` and physical-energy bindings remain `OPEN`
+
+  See [`operators/nonparadoxical/information_energy_bifurcation/README.md`](operators/nonparadoxical/information_energy_bifurcation/README.md).
+
 ## Epistemic policy
 
 Repository presence is not proof. Claims are typed as `EXACT`, `STANDARD_THEOREM`,
